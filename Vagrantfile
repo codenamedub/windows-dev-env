@@ -5,10 +5,11 @@ Vagrant.configure("2") do |config|
     # Forward ports from guest to host
     config.vm.network "forwarded_port", guest: 3000, host: 3000
     config.vm.network "forwarded_port", guest: 3001, host: 3001
+    config.vm.network "forwarded_port", guest: 3002, host: 3002
 
     config.vm.provider "virtualbox" do |vb|
         # Increase vm resources
-        vb.memory = 4096
+        vb.memory = 2048
         vb.cpus = 4
     end
 
